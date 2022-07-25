@@ -202,6 +202,26 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
         this.listLength--;
         return this;
     }
+
+    reverse(): SingleLinkedList {
+        if (!this.head || !this.tail) return this;
+
+        let node: SingleLinkedNode<DataType> = this.head;
+        this.head = this.tail;
+        this.tail = node;
+
+        let next: SingleLinkedNode<DataType> | null = null;
+        let prev: SingleLinkedNode<DataType> | null = null;
+
+        for (let i = 0; i < this.listLength; i++) {
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next as SingleLinkedNode<DataType>;
+        }
+
+        return this;
+    }
 }
 
 export default SingleLinkedList;
