@@ -9,7 +9,6 @@
     "prepublish": "tsc",
     "prepare": "npm run build"
   },
-  "files": ["lib/**/*"],
   "author": "Ritter Gustave",
   "license": "ISC",
   "dependencies": {

@@ -1,3 +1,3 @@
-import SingleLinkedList from './LinkedList';
+import SingleLinkedList from './LinkedList/SingleLinkedList';
 
 export { SingleLinkedList };

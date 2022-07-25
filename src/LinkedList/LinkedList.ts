@@ -1,7 +1,7 @@
 import SingleLinkedList from "./SingleLinkedList/SingleLinkedList";
 import { Node } from './LinkedNode/LinkedNode';
 
-interface LinkedList<DataType> {
+export interface LinkedList<DataType> {
     head: Node<DataType> | null;
     tail: Node<DataType> | null;
     push: (value: DataType) => SingleLinkedList;
