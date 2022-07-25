@@ -1,11 +1,15 @@
 {
-  "name": "simple-algos",
-  "version": "1.0.0",
-  "description": "Simple algorithm implementations in typescript",
-  "main": "index.js",
+  "name": "@ritterg/simple-dsa",
+  "version": "0.1.0",
+  "description": "Simple data structure and algorithm implementations in typescript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepublish": "tsc",
+    "prepare": "npm run build"
   },
+  "files": ["lib/**/*"],
   "author": "Ritter Gustave",
   "license": "ISC",
   "dependencies": {

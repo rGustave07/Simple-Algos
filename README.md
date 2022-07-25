@@ -7,11 +7,12 @@ A simple collection of data structures for anyone who wants to expand upon them 
 
 ## Features
 
-- Linked List (Single and Double)
+- Linked List (Single)
 
 ## Features in Progress
 
 - Trie
+- Linked List (Double)
 - Trees (BST)
 - Graph
 - Hash Table

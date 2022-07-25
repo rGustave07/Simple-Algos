@@ -14,4 +14,8 @@ interface LinkedList<DataType> {
     remove: (idx: number) => SingleLinkedList | null;
 }
 
+export interface SinglyLinkedList<DataType = any> extends LinkedList<DataType> {
+    reverse: () => SingleLinkedList;
+}
+
 export default LinkedList;
