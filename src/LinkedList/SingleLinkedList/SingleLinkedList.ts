@@ -74,7 +74,7 @@ class SingleLinkedList<DataType = any> implements SinglyLinkedList<DataType> {
     }
 
     shift(): SingleLinkedNode<DataType> | null {
-        if (!this.head) return null;
+        if (this.head === null || this.head === undefined) return null;
 
         const oldHead = this.head;
         this.head = oldHead.next;
@@ -90,7 +90,7 @@ class SingleLinkedList<DataType = any> implements SinglyLinkedList<DataType> {
     }
 
     unshift(value: DataType): SingleLinkedList {
-        if (!this.head) {
+        if (this.head === null || this.head === undefined) {
             this.push(value)
             return this;
         } else {
@@ -150,7 +150,6 @@ class SingleLinkedList<DataType = any> implements SinglyLinkedList<DataType> {
 
         // Find the linked node before insert point
         const startOfBridgeNode = this.get(idx - 1);
-        console.log(startOfBridgeNode);
 
         // An unexpected error return null
         if (!startOfBridgeNode) return null;

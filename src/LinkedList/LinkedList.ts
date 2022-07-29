@@ -23,4 +23,6 @@ export interface SinglyLinkedList<DataType = any> extends LinkedList<DataType> {
 
 export interface DoublyLinkedList<DataType = any> extends LinkedList<DataType> {}
 
+export * as DoubleLinkedList from "./DoubleLinkedList";
+
 export default LinkedList;
