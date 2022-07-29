@@ -1,7 +1,7 @@
 import SingleLinkedNode from "../LinkedNode";
-import LinkedList from "../LinkedList";
+import { SinglyLinkedList } from "../LinkedList";
 
-class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
+class SingleLinkedList<DataType = any> implements SinglyLinkedList<DataType> {
     head: SingleLinkedNode<DataType> | null;
     tail: SingleLinkedNode<DataType> | null;
     listLength: number;
@@ -26,7 +26,7 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
     push(value: DataType): SingleLinkedList {
         const freshNode = new SingleLinkedNode(value);
 
-        if (!this.head && !this.tail) {
+        if (this.listLength === 0) {
             this.head = freshNode;
             this.tail = freshNode;
             
@@ -34,15 +34,7 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
             return this;
         }
 
-        if (!this.tail) {
-            this.head?.setNext(freshNode);
-            this.tail = freshNode;
-
-            this.listLength++;
-            return this;
-        }
-
-        this.tail.setNext(freshNode);
+        this.tail?.setNext(freshNode);
         this.tail = freshNode;
 
         this.listLength++;
@@ -82,7 +74,7 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
     }
 
     shift(): SingleLinkedNode<DataType> | null {
-        if (!this.head) return null;
+        if (this.head === null || this.head === undefined) return null;
 
         const oldHead = this.head;
         this.head = oldHead.next;
@@ -98,7 +90,7 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
     }
 
     unshift(value: DataType): SingleLinkedList {
-        if (!this.head) {
+        if (this.head === null || this.head === undefined) {
             this.push(value)
             return this;
         } else {
@@ -158,7 +150,6 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
 
         // Find the linked node before insert point
         const startOfBridgeNode = this.get(idx - 1);
-        console.log(startOfBridgeNode);
 
         // An unexpected error return null
         if (!startOfBridgeNode) return null;
@@ -215,7 +206,7 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
 
         for (let i = 0; i < this.listLength; i++) {
             next = node.next;
-            node.next = prev;
+            node.setNext(prev);
             prev = node;
             node = next as SingleLinkedNode<DataType>;
         }
