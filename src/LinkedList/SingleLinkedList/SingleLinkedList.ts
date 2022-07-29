@@ -1,7 +1,7 @@
 import SingleLinkedNode from "../LinkedNode";
-import LinkedList from "../LinkedList";
+import { SinglyLinkedList } from "../LinkedList";
 
-class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
+class SingleLinkedList<DataType = any> implements SinglyLinkedList<DataType> {
     head: SingleLinkedNode<DataType> | null;
     tail: SingleLinkedNode<DataType> | null;
     listLength: number;
@@ -26,7 +26,7 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
     push(value: DataType): SingleLinkedList {
         const freshNode = new SingleLinkedNode(value);
 
-        if (!this.head && !this.tail) {
+        if (this.listLength === 0) {
             this.head = freshNode;
             this.tail = freshNode;
             
@@ -34,15 +34,7 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
             return this;
         }
 
-        if (!this.tail) {
-            this.head?.setNext(freshNode);
-            this.tail = freshNode;
-
-            this.listLength++;
-            return this;
-        }
-
-        this.tail.setNext(freshNode);
+        this.tail?.setNext(freshNode);
         this.tail = freshNode;
 
         this.listLength++;
@@ -215,7 +207,7 @@ class SingleLinkedList<DataType = any> implements LinkedList<DataType> {
 
         for (let i = 0; i < this.listLength; i++) {
             next = node.next;
-            node.next = prev;
+            node.setNext(prev);
             prev = node;
             node = next as SingleLinkedNode<DataType>;
         }
