@@ -47,10 +47,25 @@ class DoubleLinkedList<DataType = any> implements DoublyLinkedList<DataType> {
 		if (this.listLength === 0) return null;
 
 		if (this.listLength === 1) {
-			this.head = null;
-			this.tail = null;
+			if (this.head) {
+				const removedNode = this.head;
 
-			return null;
+				this.head = null;
+				this.tail = null;
+
+				this.listLength--;
+				return removedNode
+			};
+
+			if (this.tail) {
+				const removedNode = this.tail;
+
+				this.head = null;
+				this.tail = null;
+
+				this.listLength--;
+				return removedNode;
+			};
 		}
 
 		const removedNode = this.tail;

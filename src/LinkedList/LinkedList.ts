@@ -4,11 +4,12 @@ import { Node } from './LinkedNode/LinkedNode';
 
 type List = SingleLinkedList | DoubleLinkedList
 
-export interface LinkedList<DataType> {
+export default interface LinkedList<DataType> {
     head: Node<DataType> | null;
     tail: Node<DataType> | null;
+    listLength: number;
     push: (value: DataType) => List;
-    pop: (value: DataType) => Node<DataType> | null;
+    pop: () => Node<DataType> | null;
     shift: () => Node<DataType> | null;
     unshift: (value: DataType) => List;
     get: (idx: number) => Node<DataType> | null;
@@ -22,7 +23,3 @@ export interface SinglyLinkedList<DataType = any> extends LinkedList<DataType> {
 }
 
 export interface DoublyLinkedList<DataType = any> extends LinkedList<DataType> {}
-
-export * as DoubleLinkedList from "./DoubleLinkedList";
-
-export default LinkedList;

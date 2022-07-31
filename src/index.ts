@@ -1,8 +1,8 @@
 import SingleLinkedList from './LinkedList/SingleLinkedList';
-import {
-	LinkedList,
+import DoubleLinkedList from './LinkedList/DoubleLinkedList';
+
+import LinkedList, {
 	SinglyLinkedList,
-	DoubleLinkedList,
 	DoublyLinkedList 
 } from './LinkedList/LinkedList'; 
 
