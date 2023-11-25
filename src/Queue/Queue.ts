@@ -22,7 +22,7 @@ class Queue<DataType> implements QueueInterface<DataType> {
         }
 
         this.queue = constructedQueue;
-    }
+    };
 
     enqueue(value: DataType): QueueLength {
         this.queue.unshift(value);
@@ -34,7 +34,11 @@ class Queue<DataType> implements QueueInterface<DataType> {
         const processedNode = this.queue.pop();
 
         return [this.queue.listLength, processedNode?.value];
-    }
+    };
+
+    queueLength(): number {
+        return this.queue.listLength;
+    };
 }
 
 export default Queue;

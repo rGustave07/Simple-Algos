@@ -183,7 +183,7 @@ class SingleLinkedList<DataType = any> implements SinglyLinkedList<DataType> {
 
         if (!nodeBeforeRemovedNode || !removedNode) return null;
 
-        // Store the removed nodes next (AKA rest of the lest)
+        // Store the removed nodes next (AKA rest of the list)
         // and connect the node before removed node to skip removed
         const nextNode = removedNode.next;
         nodeBeforeRemovedNode.setNext(nextNode);
