@@ -6,10 +6,15 @@ import LinkedList, {
 	DoublyLinkedList 
 } from './LinkedList/LinkedList'; 
 
+import BinarySearchTree from './Trees/BinarySearch/BinarySearchTree';
+import BSTNode from './Trees/BSTNode/BSTNode';
+
 export {
 	SingleLinkedList,
 	LinkedList,
 	SinglyLinkedList, 
 	DoubleLinkedList,
-	DoublyLinkedList
+	DoublyLinkedList,
+	BinarySearchTree,
+	BSTNode
 };
