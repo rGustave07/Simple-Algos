@@ -1,6 +1,8 @@
 <a name="readme-top"></a>
 
 [![Publish Package](https://github.com/rGustave07/Simple-Dsa/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/rGustave07/Simple-Dsa/actions/workflows/npm-publish.yml)
+
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
