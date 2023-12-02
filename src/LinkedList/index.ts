@@ -1,6 +1,6 @@
-import SingleLinkedList from "./SingleLinkedList/SingleLinkedList";
-import DoubleLinkedList from "./DoubleLinkedList/DoubleLinkedList";
-import { Node } from './LinkedNode/LinkedNode';
+import SingleLinkedList from "./SingleLinkedList";
+import DoubleLinkedList from "./DoubleLinkedList";
+import Node from './LinkedNode';
 
 type List = SingleLinkedList | DoubleLinkedList
 
@@ -17,6 +17,8 @@ export default interface LinkedList<DataType> {
     insert: (value: DataType, idx: number) => List | null;
     remove: (idx: number) => List | null;
 }
+
+export { SingleLinkedList, DoubleLinkedList }
 
 export interface SinglyLinkedList<DataType = any> extends LinkedList<DataType> {
     reverse: () => SingleLinkedList;

@@ -1,16 +1,23 @@
-import SingleLinkedList from './LinkedList/SingleLinkedList';
-import DoubleLinkedList from './LinkedList/DoubleLinkedList';
-import BinaryHeap from './Heap/BinaryHeap/BinaryHeap';
-import Queue, { PriorityQueue } from './Queue';
+// Lists
 import LinkedList, {
+	SingleLinkedList,
+	DoubleLinkedList,
 	SinglyLinkedList,
 	DoublyLinkedList 
-} from './LinkedList/LinkedList'; 
+} from './LinkedList'; 
 
-import HeapDataNode from './Heap/HeapDataNode';
-import BinarySearchTree from './Trees/BinarySearch/BinarySearchTree';
-import BSTNode from './Trees/BSTNode/BSTNode';
-import Stack from './Stack/Stack';
+// Trees & Heaps
+import BinaryHeap from './Heap';
+import HeapDataNode from './Heap';
+import BinarySearchTree from './Trees';
+import BSTNode from './Trees';
+import Graph from './Graph';
+
+// Queues
+import Queue, { PriorityQueue } from './Queue';
+
+// Stacks
+import Stack from './Stack';
 
 export {
 	// Lists
@@ -19,7 +26,8 @@ export {
 	SinglyLinkedList, 
 	DoubleLinkedList,
 	DoublyLinkedList,
-	// Trees
+	// Trees & Heaps
+	Graph,
 	BinarySearchTree,
 	BSTNode,
 	HeapDataNode,

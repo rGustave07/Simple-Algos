@@ -1,5 +1,5 @@
-import SingleLinkedNode from "../LinkedNode";
-import { SinglyLinkedList } from "../LinkedList";
+import { SinglyLinkedList } from "../";
+import SingleLinkedNode from "../LinkedNode/LinkedNode";
 
 class SingleLinkedList<DataType = any> implements SinglyLinkedList<DataType> {
     head: SingleLinkedNode<DataType> | null;

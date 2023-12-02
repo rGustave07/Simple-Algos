@@ -1,5 +1,5 @@
 import { DoubleLinkedNode, Node } from "../LinkedNode/LinkedNode";
-import { DoublyLinkedList } from "../LinkedList";
+import { DoublyLinkedList } from "../";
 
 class DoubleLinkedList<DataType = any> implements DoublyLinkedList<DataType> {
 	head: DoubleLinkedNode<DataType> | null;
