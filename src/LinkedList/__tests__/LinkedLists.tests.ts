@@ -17,4 +17,12 @@ describe("LinkedLists", () => {
         const poppedNode = numberList.pop();
         expect(poppedNode?.value).toBe(3);
     })
+
+    it('Should allow user to insert into the list', () => {
+        const numberList = new SingleLinkedList<number>();
+        numberList.push(1).push(3);
+        numberList.insert(2, 1);
+
+        expect(numberList.head?.next?.value).toBe(2);
+    })
 });
