@@ -1,3 +1,4 @@
+[![Publish Package](https://github.com/rGustave07/Simple-Dsa/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/rGustave07/Simple-Dsa/actions/workflows/npm-publish.yml)
 # SimpleDsa
 
 A simple collection of data structures for anyone who wants to expand upon them or simply use them as is!
