@@ -1,5 +1,4 @@
-import { DoublyLinkedList } from "../LinkedList/LinkedList";
-import DoubleLinkedList from "../LinkedList/DoubleLinkedList";
+import { DoublyLinkedList, DoubleLinkedList } from "../LinkedList";
 
 interface QueueInterface<DataType> {
     enqueue: (value: DataType) => QueueLength;

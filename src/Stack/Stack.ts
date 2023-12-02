@@ -1,5 +1,7 @@
-import { SinglyLinkedList } from "../LinkedList/LinkedList";
-import SingleLinkedList from "../LinkedList/SingleLinkedList";
+import {
+    SingleLinkedList,
+    SinglyLinkedList 
+} from "../LinkedList";
 
 interface StackInterface<DataType> {
     getStackLength(): LengthOfStack;
